@@ -11,8 +11,6 @@
     background: transparent;
     height: 48px;
     width: 48px;
-    margin-right: 4px;
-    margin-left: 4px;
 }
 
 .nav-tab {
@@ -84,8 +82,4 @@
     justify-content: flex-end;
     gap: 10px;
     margin-right: 4px;
-}
-
-.amigos, .sino, .salvos, .perfil {
-    cursor: pointer;
 }
