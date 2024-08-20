@@ -5,7 +5,7 @@ import Logo from "@/assets/logo.png"
 export const TabMenu = () => {
     return(
         <>
-            <button className="games-tab mx-1">
+            <button className="mx-[14px]">
                 <Image src={Menu} alt="abre" width={30} height={30} />
             </button>
             <div>
