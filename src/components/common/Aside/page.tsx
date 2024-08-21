@@ -1,10 +1,11 @@
+import Link from "next/link";
 import { Button } from "../../Button";
 import { AsideItem } from "./AsideItem";
 import Perfil from "@/assets/logo.png"
 
 export const Aside = () => {
   return (
-    <aside style={{ height: 'calc(100% - var(--header-height))' }} className="absolute left-0 overflow-auto w-48 scrollbar-thin border-white/15 border-solid border-r-[1px] py-4">
+    <aside style={{ height: 'calc(100% - var(--header-height))' }} className="absolute left-0 overflow-auto w-52 scrollbar-thin border-white/15 border-solid border-r-[1px] py-4">
       <AsideItem image={Perfil} text="Página Inicial" link="/" />
       <AsideItem image={Perfil} text="Recentes" link="/" />
       <AsideItem image={Perfil} text="Novo" link="/" />
@@ -34,6 +35,18 @@ export const Aside = () => {
       <AsideItem image={Perfil} text="Tags" link="/" />
       <div className="mx-4 my-2">
         <Button text="Suporte" image={Perfil} />
+      </div>
+      <hr className="mx-4 my-4 border-white/15" />
+      <div className="mx-4 my-2 flex flex-col gap-1 text-sm">
+        <Link href="https://turmadoproblems.com.br/" target="_blank" className="hover:opacity-50">
+          Sobre
+        </Link>
+        <Link href="termos-e-condicoes" className="hover:opacity-50">
+          Termos e Condições
+        </Link>
+        <Link href="politica-de-privacidade" className="hover:opacity-50">
+          Politica de Privacidade
+        </Link>
       </div>
     </aside>
   );
