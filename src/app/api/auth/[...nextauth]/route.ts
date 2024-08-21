@@ -18,7 +18,10 @@ const handler = NextAuth({
         });
 
         if (user && user.password === credentials?.password) {
-          return user;
+          return {
+            ...user,
+            id: user.id.toString(),
+          };
         } else {
           return null;
         }

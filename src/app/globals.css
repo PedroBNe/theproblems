@@ -6,6 +6,12 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --header-height: 60px;
+  --header-search-width: 262px;
+  --header-logo-height: 35px;
+  --header-mobile-height: 56px;
+  --header-tablet-height: 60px;
+  --header-mobile-logo-height: 30px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,13 +23,30 @@
 }
 
 body {
-  /* color: rgb(var(--foreground-rgb)); */
+  color: rgb(var(--foreground-rgb)); 
   background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #AAADBE transparent;
+}
+
+.scrollbar-thin {
+  scrollbar-width: none;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 8px; /* Para Chrome, Safari e Edge */
+}
+
+.scrollbar-thin:hover{
+  scrollbar-width: thin;
 }
 
 @layer utilities {
