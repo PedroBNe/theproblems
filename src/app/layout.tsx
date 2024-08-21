@@ -22,7 +22,7 @@ export default function RootLayout({
       <body className={`${inter.className} ${nunito.className}`}>
         <Header />
         <Aside />
-        <main className="ml-[208px] mt-[var(--header-height)]">
+        <main className="flex flex-col ml-[208px] mt-[var(--header-height)]">
           {children}
         </main>
       </body>
