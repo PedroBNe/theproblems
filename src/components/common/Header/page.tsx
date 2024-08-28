@@ -10,7 +10,7 @@ import { Button } from "../../Button"
 
 export const Header = () => {
   return (
-    <header className="fixed top-0 w-full min-h-[var(--header-height)] max-h-[var(--header-height)]">
+    <header className="fixed top-0 w-full min-h-[var(--header-height)] max-h-[var(--header-height)] z-20">
       <nav className="flex row bg-[#212233] backdrop-blur-[8px] py-2 items-center justify-between">
         <div className="flex row gap-[5px]">
           <TabMenu />
