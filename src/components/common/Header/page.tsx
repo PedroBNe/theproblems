@@ -21,9 +21,9 @@ import PrefNot from "@/assets/pref-not.svg";
 
 export const Header = () => {
 
-  const [ isHiddenFav, setIsHiddenFav ] = useState(false)
-  const [ isHiddenRec, setIsHiddenRec ] = useState(true)
-  const [ isHiddenCur, setIsHiddenCur ] = useState(true)
+  const [isHiddenFav, setIsHiddenFav] = useState(false)
+  const [isHiddenRec, setIsHiddenRec] = useState(true)
+  const [isHiddenCur, setIsHiddenCur] = useState(true)
 
   const divRefFav = useRef<HTMLDivElement>(null);
   const divRefRec = useRef<HTMLDivElement>(null);
@@ -48,7 +48,7 @@ export const Header = () => {
             <div className="h-[50%] justify-center items-center flex flex-col m-4 gap-8 text-xl">
               <button className="absolute top-0 left-0 m-3 w-fit rounded-full hover:opacity-70 transition"
               >
-                <Image src={OpenConfig} alt="config-button" width={25}/>
+                <Image src={OpenConfig} alt="config-button" width={25} />
               </button>
               <Image src={Clock} alt='clock-icon' width={100} />
               <div className="justify-center items-center text-center m-4 text-[#AAADBE]">
@@ -60,29 +60,29 @@ export const Header = () => {
             <div className="h-[50%] items-center flex flex-col m-4 text-lg text-[#AAADBE]">
               <ul className="w-full flex flex-row justify-around cursor-pointer">
                 <li className={`${isHiddenFav ? 'border-transparent' : 'border-b-[#6842FF]'} border-4 border-transparent hover:opacity-60 transition relative`}
-                onClick={() => {
-                  setIsHiddenFav(false)
-                  setIsHiddenRec(true)
-                  setIsHiddenCur(true)
-                }}
+                  onClick={() => {
+                    setIsHiddenFav(false)
+                    setIsHiddenRec(true)
+                    setIsHiddenCur(true)
+                  }}
                 >
                   Favoritos
                 </li>
                 <li className={`${isHiddenRec ? 'border-transparent' : 'border-b-[#6842FF]'} border-4 border-transparent hover:opacity-60 transition relative`}
-                onClick={() => {
-                  setIsHiddenFav(true)
-                  setIsHiddenRec(false)
-                  setIsHiddenCur(true)
-                }}
+                  onClick={() => {
+                    setIsHiddenFav(true)
+                    setIsHiddenRec(false)
+                    setIsHiddenCur(true)
+                  }}
                 >
                   Recentes
                 </li>
                 <li className={`${isHiddenCur ? 'border-transparent' : 'border-b-[#6842FF]'} border-4 border-transparent hover:opacity-60 transition relative`}
-                onClick={() => {
-                  setIsHiddenFav(true)
-                  setIsHiddenRec(true)
-                  setIsHiddenCur(false)
-                }}
+                  onClick={() => {
+                    setIsHiddenFav(true)
+                    setIsHiddenRec(true)
+                    setIsHiddenCur(false)
+                  }}
                 >
                   Curtidos
                 </li>
@@ -92,7 +92,7 @@ export const Header = () => {
                 {!isHiddenFav && (
                   <div className="absolute w-[95%] min-h-[40em] bg-[#212233] flex flex-col items-center gap-3" ref={divRefFav}>
                     <div className="w-full min-h-[10vh] flex rounded-lg items-center justify-center">
-                      <Link href=''><Button text="Registrar-se / Entrar"/></Link>
+                      <Link href=''><Button text="Registrar-se / Entrar" /></Link>
                     </div>
                   </div>
                 )}
@@ -106,7 +106,7 @@ export const Header = () => {
                 {!isHiddenCur && (
                   <div className="absolute w-[95%] min-h-[40em] bg-[#212233] flex flex-col items-center" ref={divRefCur}>
                     <div className="w-full min-h-[10vh] flex rounded-lg items-center justify-center">
-                      <Link href=''><Button text="Registrar-se / Entrar"/></Link>
+                      <Link href=''><Button text="Registrar-se / Entrar" /></Link>
                     </div>
                   </div>
                 )}
@@ -122,7 +122,7 @@ export const Header = () => {
               <ConfigsPer />
               <hr className="border-1 w-full rounded-full border-[#AAADBE]" />
               <div className="w-full flex pl-4 gap-2">
-                <Image src={PrefNot} alt='config-profile-icon' width={15}/>
+                <Image src={PrefNot} alt='config-profile-icon' width={15} />
                 <Link href="" target="_blank" className="hover:opacity-50 transition">Suporte</Link>
               </div>
               <hr className="border-1 w-full rounded-full border-[#AAADBE]" />
@@ -136,6 +136,6 @@ export const Header = () => {
           </div>
         </div>
       </nav>
-    </header>
+    </header >
   );
 };

@@ -1,11 +1,13 @@
 import { NextResponse } from "next/server";
 import { PrismaClient } from "@prisma/client";
+import { hash } from "bcryptjs"; // Importa bcryptjs para hashear senhas
 
 const prisma = new PrismaClient();
 
 export async function POST(request: Request) {
-  const { email, password } = await request.json();
+  const { name, email, password } = await request.json();
 
+  // Verifica se o usuário já existe
   const userExists = await prisma.user.findUnique({ where: { email } });
 
   if (userExists) {
@@ -13,13 +15,20 @@ export async function POST(request: Request) {
       { message: "User already exists" },
       { status: 400 }
     );
-  } else {
-    const user = await prisma.user.create({
-      data: {
-        email,
-        password,
-      },
-    });
-    return NextResponse.json(user);
   }
+
+  // Hasheia a senha antes de armazená-la no banco de dados
+  const hashedPassword = await hash(password, 12);
+
+  // Cria o usuário com a senha hasheada
+  const user = await prisma.user.create({
+    data: {
+      name,
+      email,
+      password: hashedPassword, // Armazena a senha hasheada
+    },
+  });
+
+  // Retorna a resposta com o novo usuário criado
+  return NextResponse.json(user, { status: 201 });
 }

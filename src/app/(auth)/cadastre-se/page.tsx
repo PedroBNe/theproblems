@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 
 export default function Register() {
   const router = useRouter();
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -14,7 +15,7 @@ export default function Register() {
     const res = await fetch("/api/auth/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, password }),
+      body: JSON.stringify({ name, email, password }),
     });
 
     if (res.ok) {
@@ -27,10 +28,13 @@ export default function Register() {
       <h1>Register</h1>
       <form onSubmit={handleSubmit}>
         <label>
-          Email: <input value={email} onChange={(e) => setEmail(e.target.value)} type="text" />
+          Nome: <input value={name} onChange={(e) => setName(e.target.value)} type="text" className="text-black" />
         </label>
         <label>
-          Password: <input value={password} onChange={(e) => setPassword(e.target.value)} type="password" />
+          Email: <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" className="text-black" />
+        </label>
+        <label>
+          Password: <input value={password} onChange={(e) => setPassword(e.target.value)} type="password" className="text-black" />
         </label>
         <button type="submit">Register</button>
       </form>
