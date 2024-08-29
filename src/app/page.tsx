@@ -2,7 +2,7 @@ import { CarouselPage } from "@/components/carousel/page";
 
 export default function Home() {
   return (
-    <div className="pl-2">
+    <div className="pl-2 ">
       <CarouselPage title="Continuar jogando" />
       <CarouselPage title="Novos Jogos" />
       <CarouselPage title="Jogos .io" />
