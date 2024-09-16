@@ -12,27 +12,27 @@ export default function ConfigsPer() {
         <div className="w-full flex flex-col gap-1 pl-4">
             <div className="flex gap-2">
                 <Image src={ConfigPro} alt='config-profile-icon' width={15}/>
-                <Link href="" target="_blank" className="hover:opacity-50 transition w-fit">Meu Perfil</Link>
+                <Link href="/perfil" className="hover:opacity-50 transition w-fit">Meu Perfil</Link>
             </div>
             <div className="flex gap-2">
                 <Image src={EditPro} alt='config-profile-icon' width={15}/>
-                <Link href="" target="_blank" className="hover:opacity-50 transition w-fit">{}Editar Perfil</Link>
+                <Link href="" className="hover:opacity-50 transition w-fit">{}Editar Perfil</Link>
             </div>
             <div className="flex gap-2">
                 <Image src={PrefNot} alt='config-profile-icon' width={15}/>
-                <Link href="" target="_blank" className="hover:opacity-50 transition w-fit">{}Config de Notificacao</Link>
+                <Link href="" className="hover:opacity-50 transition w-fit">{}Config de Notificacao</Link>
             </div>
             <div className="flex gap-2">
                 <Image src={Privacy} alt='config-profile-icon' width={15}/>
-                <Link href="" target="_blank" className="hover:opacity-50 transition w-fit">{}Privacidade</Link>
+                <Link href="" className="hover:opacity-50 transition w-fit">{}Privacidade</Link>
             </div>
             <div className="flex gap-2">
                 <Image src={ConfigAcc} alt='config-profile-icon' width={15}/>
-                <Link href="" target="_blank" className="hover:opacity-50 transition w-fit">{}Configuracoes da conta</Link>
+                <Link href="" className="hover:opacity-50 transition w-fit">{}Configuracoes da conta</Link>
             </div>
             <div className="flex gap-2">
                 <Image src={ExitAcc} alt='config-profile-icon' width={15}/>
-                <Link href="" target="_blank" className="hover:opacity-50 transition w-fit">{}Sair</Link>
+                <Link href="" className="hover:opacity-50 transition w-fit">{}Sair</Link>
             </div>
         </div>
     )
