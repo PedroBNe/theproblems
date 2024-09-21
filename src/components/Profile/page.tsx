@@ -34,7 +34,7 @@ export default function Profile() {
         <div className="h-screen flex justify-center">
             <div className="w-[80%] flex flex-col items-center gap-5">
                 <div className="w-full h-[24em] flex flex-col justify-between">
-                    <div 
+                    <div
                     className={`relative w-full h-[75%] rounded-b-xl bg-gray-600`}
                     onMouseEnter={ SetEditBanner() }
                     onMouseLeave={ SetEditBanner() }
@@ -50,7 +50,7 @@ export default function Profile() {
                     </div>
                     <div className="w-full h-[25%] flex justify-between bg-transparent">
                         <div className="w-[50%] relative">
-                            <div 
+                            <div
                             className={`absolute w-[9em] h-[9em] top-[-70%] left-[3%] rounded-xl border-4 border-black bg-blue-300 shadow-2xl`}
                             onMouseEnter={ SetEdit() }
                             onMouseLeave={ SetEdit() }
@@ -95,7 +95,7 @@ export default function Profile() {
                                 </div>
                             </div>
                             <div className='w-full flex gap-4'>
-                                <LikeIco width={40} height={40} fillColor='#9ca3af'/>
+                                <LikeIco width={40} height={40} fillColor='#9ca3af' rotate={0}/>
                                 <div>
                                     <h3 className='text-[#9ca3af] font-semibold'>Jogos curtidos</h3>
                                     <p className='font-semibold pl-2'>{ gamelike } Jogos</p>
@@ -117,7 +117,7 @@ export default function Profile() {
                     <div className="w-[84%] p-3 flex flex-col rounded-xl bg-[#373952]">
                         <h2 className="font-semibold lg:text-lg">Jogos curtidos</h2>
                         <div className="w-full h-full flex flex-col gap-3 justify-center items-center">
-                            <LikeIco width={70} height={70} fillColor='#9ca3af'/>
+                            <LikeIco width={70} height={70} fillColor='#9ca3af' rotate={0}/>
                             <h2 className='font-semibold text-xl'>Seus Jogos curtidos aparecerao aqui!</h2>
                             <p className='text-md text-[#9ca3af]'>Jogue alguns jogos, e curta para um livre e pratico acesso</p>
                             <Link href="">

@@ -26,6 +26,7 @@ export default async function RootLayout({
         <SessionProvider session={session}>
           <Header />
           <Aside />
+          {/* ml-[208px] */}
           <main className="flex flex-col ml-[208px] mt-[var(--header-height)]">
             {children}
           </main>
