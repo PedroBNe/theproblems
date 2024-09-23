@@ -7,7 +7,6 @@ import Profile from "@/assets/profile.svg"
 import Notification from "@/assets/notification.svg"
 import { IconButton } from "./IconButton"
 import { InputForm } from "./InputForm"
-import { TabMenu } from "./TabMenu"
 import { Button } from "../../Button"
 import OpenConfig from "@/assets/config-icon.svg"
 import Clock from "@/assets/clock.svg"
@@ -18,6 +17,7 @@ import { useRef, useState } from "react"
 import AppsAndSites from "@/components/footer-apps/page"
 import ConfigsPer from "./Configs-profile"
 import PrefNot from "@/assets/pref-not.svg";
+import Logo from "@/assets/logo.png"
 
 export const Header = () => {
 
@@ -32,8 +32,10 @@ export const Header = () => {
   return (
     <header className="fixed top-0 w-full min-h-[var(--header-height)] max-h-[var(--header-height)] z-20">
       <nav className="flex row bg-[#212233] backdrop-blur-[8px] py-2 items-center justify-between">
-        <div className="flex row gap-[5px]">
-          <TabMenu />
+        <div className="flex justify-center items-center ml-[8%]">
+          <Link href="/">
+            <Image src={Logo} alt="logo" width={100} height={100} />
+          </Link>
         </div>
         <InputForm image={Search} alt="search" />
         <div className="flex row px-2 items-center justify-end mr-[4px]">

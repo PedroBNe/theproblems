@@ -22,12 +22,12 @@ export default async function RootLayout({
   const session = await getServerSession();
   return (
     <html lang="pt-br">
-      <body className={`${inter.className} ${nunito.className}`}>
+      <body className={`${inter.className} ${nunito.className} relative`}>
         <SessionProvider session={session}>
           <Header />
           <Aside />
           {/* ml-[208px] */}
-          <main className="flex flex-col ml-[208px] mt-[var(--header-height)]">
+          <main className="absolute flex flex-col mt-[var(--header-height)] z-10">
             {children}
           </main>
         </SessionProvider>
